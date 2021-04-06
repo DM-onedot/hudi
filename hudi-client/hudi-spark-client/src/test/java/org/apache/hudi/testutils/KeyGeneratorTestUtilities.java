@@ -18,13 +18,13 @@
 
 package org.apache.hudi.testutils;
 
-import org.apache.hudi.AvroConversionHelper;
 import org.apache.hudi.AvroConversionUtils;
 
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericRecord;
 import org.apache.spark.sql.Row;
+import org.apache.spark.sql.avro.hudi.AvroConversionHelper;
 import org.apache.spark.sql.catalyst.expressions.GenericRowWithSchema;
 import org.apache.spark.sql.types.StructType;
 

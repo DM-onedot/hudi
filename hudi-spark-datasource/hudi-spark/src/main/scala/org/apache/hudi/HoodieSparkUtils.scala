@@ -23,13 +23,13 @@ import org.apache.avro.generic.GenericRecord
 import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.hudi.client.utils.SparkRowDeserializer
 import org.apache.hudi.common.model.HoodieRecord
-import org.apache.spark.SPARK_VERSION
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{DataFrame, Row, SparkSession}
 import org.apache.spark.sql.avro.SchemaConverters
+import org.apache.spark.sql.avro.hudi.AvroConversionHelper
 import org.apache.spark.sql.catalyst.encoders.{ExpressionEncoder, RowEncoder}
 import org.apache.spark.sql.execution.datasources.{FileStatusCache, InMemoryFileIndex}
 import org.apache.spark.sql.types.{StringType, StructField, StructType}
+import org.apache.spark.sql.{DataFrame, Row, SparkSession}
 
 import scala.collection.JavaConverters._
 
@@ -111,11 +111,6 @@ object HoodieSparkUtils {
   }
 
   def createDeserializer(encoder: ExpressionEncoder[Row]): SparkRowDeserializer = {
-    // TODO remove Spark2RowDeserializer if Spark 2.x support is dropped
-    if (SPARK_VERSION.startsWith("2.")) {
-      new Spark2RowDeserializer(encoder)
-    } else {
-      new Spark3RowDeserializer(encoder)
-    }
+    new Spark3RowDeserializer(encoder)
   }
 }

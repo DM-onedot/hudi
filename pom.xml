@@ -29,7 +29,7 @@
   <groupId>org.apache.hudi</groupId>
   <artifactId>hudi</artifactId>
   <packaging>pom</packaging>
-  <version>0.7.0</version>
+  <version>0.7.0-onedot</version>
   <description>Apache Hudi brings stream style processing on big data</description>
   <url>https://github.com/apache/hudi</url>
   <name>Hudi</name>
@@ -43,18 +43,7 @@
     <module>hudi-timeline-service</module>
     <module>hudi-utilities</module>
     <module>hudi-sync</module>
-    <module>packaging/hudi-hadoop-mr-bundle</module>
-    <module>packaging/hudi-hive-sync-bundle</module>
-    <module>packaging/hudi-spark-bundle</module>
-    <module>packaging/hudi-presto-bundle</module>
-    <module>packaging/hudi-utilities-bundle</module>
-    <module>packaging/hudi-timeline-server-bundle</module>
-    <module>docker/hoodie/hadoop</module>
-    <module>hudi-integ-test</module>
-    <module>packaging/hudi-integ-test-bundle</module>
-    <module>hudi-examples</module>
     <module>hudi-flink</module>
-    <module>packaging/hudi-flink-bundle</module>
   </modules>
 
   <licenses>
@@ -98,20 +87,20 @@
     <log4j.version>1.2.17</log4j.version>
     <slf4j.version>1.7.15</slf4j.version>
     <joda.version>2.9.9</joda.version>
-    <hadoop.version>2.7.3</hadoop.version>
+    <hadoop.version>3.2.1</hadoop.version>
     <hive.groupid>org.apache.hive</hive.groupid>
-    <hive.version>2.3.1</hive.version>
+    <hive.version>3.1.2</hive.version>
     <hive.exec.classifier>core</hive.exec.classifier>
     <metrics.version>4.1.1</metrics.version>
     <prometheus.version>0.8.0</prometheus.version>
     <http.version>4.4.1</http.version>
-    <spark.version>2.4.4</spark.version>
+    <spark.version>${spark3.version}</spark.version>
     <flink.version>1.11.2</flink.version>
     <spark2.version>2.4.4</spark2.version>
-    <spark3.version>3.0.0</spark3.version>
+    <spark3.version>3.0.1</spark3.version>
     <avro.version>1.8.2</avro.version>
     <scala.version>2.11.12</scala.version>
-    <scala.binary.version>2.11</scala.binary.version>
+    <scala.binary.version>2.12</scala.binary.version>
     <scala12.version>2.12.10</scala12.version>
     <apache-rat-plugin.version>0.12</apache-rat-plugin.version>
     <scala-maven-plugin.version>3.3.1</scala-maven-plugin.version>

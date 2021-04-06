@@ -16,11 +16,7 @@
  * limitations under the License.
  */
 
-package org.apache.hudi
-
-import java.nio.ByteBuffer
-import java.sql.{Date, Timestamp}
-import java.util
+package org.apache.spark.sql.avro.hudi
 
 import org.apache.avro.Conversions.DecimalConversion
 import org.apache.avro.LogicalTypes.{TimestampMicros, TimestampMillis}
@@ -34,6 +30,9 @@ import org.apache.spark.sql.catalyst.expressions.GenericRow
 import org.apache.spark.sql.catalyst.util.DateTimeUtils
 import org.apache.spark.sql.types._
 
+import java.nio.ByteBuffer
+import java.sql.{Date, Timestamp}
+import java.util
 import scala.collection.JavaConverters._
 
 object AvroConversionHelper {

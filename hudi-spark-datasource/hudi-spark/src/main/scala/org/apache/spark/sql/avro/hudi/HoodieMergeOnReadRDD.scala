@@ -16,13 +16,14 @@
  * limitations under the License.
  */
 
-package org.apache.hudi
+package org.apache.spark.sql.avro.hudi
 
 import org.apache.hudi.common.fs.FSUtils
 import org.apache.hudi.common.table.log.HoodieMergedLogRecordScanner
 import org.apache.hudi.exception.HoodieException
 import org.apache.hudi.hadoop.config.HoodieRealtimeConfig
 import org.apache.hudi.hadoop.utils.HoodieInputFormatUtils.HOODIE_RECORD_KEY_COL_POS
+import org.apache.hudi.{AvroConversionUtils, DataSourceReadOptions, HoodieMergeOnReadFileSplit, HoodieMergeOnReadTableState}
 import org.apache.avro.Schema
 import org.apache.avro.generic.{GenericRecord, GenericRecordBuilder}
 import org.apache.hadoop.conf.Configuration

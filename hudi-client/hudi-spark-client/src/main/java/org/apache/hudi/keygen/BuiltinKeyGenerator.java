@@ -20,7 +20,7 @@ package org.apache.hudi.keygen;
 
 import org.apache.avro.generic.GenericRecord;
 import org.apache.hudi.ApiMaturityLevel;
-import org.apache.hudi.AvroConversionHelper;
+import org.apache.spark.sql.avro.hudi.AvroConversionHelper;
 import org.apache.hudi.PublicAPIMethod;
 import org.apache.hudi.common.config.TypedProperties;
 import org.apache.hudi.exception.HoodieKeyException;

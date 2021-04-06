@@ -19,9 +19,9 @@
 package org.apache.hudi
 
 import java.time.LocalDate
-
 import org.apache.avro.Schema
 import org.apache.avro.generic.GenericData
+import org.apache.spark.sql.avro.hudi.AvroConversionHelper
 import org.apache.spark.sql.catalyst.expressions.GenericRow
 import org.scalatest.{FunSuite, Matchers}
 
